@@ -53,7 +53,6 @@ class BetterWordCounterPlugin {
     const matches = text.match(/[a-zA-Z0-9_\u0392-\u03c9\u00c0-\u00ff\u0600-\u06ff]+|[\u4e00-\u9fff\u3400-\u4dbf\uf900-\ufaff\u3040-\u309f\uac00-\ud7af]+/gm)
     if (matches) {
       for (let i = 0; i < matches.length; i++) {
-        console.log("tik", matches[i])
         if (matches[i].charCodeAt(0) > 19968) {
           words += matches[i].length
         } else {
@@ -71,7 +70,6 @@ class BetterWordCounterPlugin {
   }
 
   updateWordCount() {
-    console.log("updateWordCount contents:", this.contents)
     this.wordCounters.global = this.getWordCount(this.contents);
 
     this.charCounters.global = this.contents.length;
@@ -80,7 +78,6 @@ class BetterWordCounterPlugin {
   }
 
   updateStatusBar() {
-    console.log("updateStatusBar", this.wordCounters, this.charCounters);
     const { statusBarEl } = this.instance
 
     if (!statusBarEl) return
