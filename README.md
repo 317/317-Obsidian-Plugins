@@ -6,7 +6,7 @@ Obsidian is cool. Very cool. but sometimes it lack things. So I will do plugins 
 
 The plugins are made on top of the [volcano](https://github.com/kognise/volcano) plugin loader brought to us by the good [Kognise](https://github.com/kognise)
 
-![](header.png)
+
 
 ## Installation
 
@@ -34,7 +34,7 @@ C:\Users\%USERNAME%\volcano\plugins
 ### BetterWordCounterPlugin 1.0
 You now have the ability to see how any words and character you selected with your mouse.
 
-![[Pasted image 20201007205915.png]]
+![[img/bwc_demo.png]]
 
 ### BetterTablesPlugin
 **PLUGIN NOT READY**
