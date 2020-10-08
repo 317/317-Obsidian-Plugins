@@ -36,6 +36,17 @@ You now have the ability to see how any words and character you selected with yo
 
 ![[img/bwc_demo.png]]
 
+### Better Zoom On Azerty Keyboard
+
+Allow the zoom handling with an AZERTY keyboard. Global commands also available.
+
+||Hotkey|Command|Result|
+|--|----|---|----|
+|1 |`ctrl+-`|`Better Zoom: Zoom Out`|Zoom out|
+|2 |`ctrl+=`|`Better Zoom: Zoom in`|Zoom in|
+|3 |`ctrl+à`|`Better Zoom: Reset Zoom`|Reset zoom|
+
+
 ### BetterTablesPlugin
 **PLUGIN NOT READY**
 
@@ -47,10 +58,9 @@ You now have the ability to see how any words and character you selected with yo
 
 #### Actual Features
 
-||Command|Result|
-|--|----|----|
-|1 |`ctrl+T`|console message "TABLE"|
-|2|`ctrl-P` then type `"Better Tables : Make new table"` | console message "TABLE"|
+||Hotkey|Command|Result|
+|--|-|----|----|
+|1 |`ctrl+T`|`Better Tables: Make new table`|console message "TABLE"|
 
 
 ## Thank you

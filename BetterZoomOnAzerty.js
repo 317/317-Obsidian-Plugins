@@ -20,19 +20,19 @@ class BetterZoomOnAzertyPlugin {
 
     this.instance.registerGlobalCommand({
       id: 'bzoom:zoomOut',
-      name: 'Better Zoom : Zoom Out',
+      name: 'Better Zoom: Zoom Out',
       callback: () => this.zoomOut()
     });
 
     this.instance.registerGlobalCommand({
       id: 'bzoom:zoomIn',
-      name: 'Better Zoom : Zoom In',
+      name: 'Better Zoom: Zoom In',
       callback: () => this.zoomIn()
     });
 
     this.instance.registerGlobalCommand({
       id: 'bzoom:reset',
-      name: 'Better Zoom : Reset Zoom',
+      name: 'Better Zoom: Reset Zoom',
       callback: () => this.resetZoom()
     });
 

@@ -13,7 +13,7 @@ class BetterTablesPlugin {
 
     this.instance.registerGlobalCommand({
       id: 'btable:make',
-      name: 'Better Tables : Make new table',
+      name: 'Better Tables: Make new table',
       callback: () => this.trigger()
     });
     console.log(this.app)
