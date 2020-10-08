@@ -15,7 +15,6 @@ class BetterZoomOnAzertyPlugin {
   }
 
   init(app, instance) {
-    console.log("INIT")
     this.app = app
     this.instance = instance
 
