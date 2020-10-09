@@ -47,22 +47,6 @@ Allow the zoom handling with an AZERTY keyboard. Global commands also available.
 |3 |`ctrl+à`|`Better Zoom: Reset Zoom`|Reset zoom|
 
 
-### BetterTablesPlugin
-**PLUGIN NOT READY**
-
-#### Planned Features
-- Table creation by text command & hotkeys
-- Table formatting
-- Sorting
-- Adding columns
-
-#### Actual Features
-
-||Hotkey|Command|Result|
-|--|-|----|----|
-|1 |`ctrl+T`|`Better Tables: Make new table`|console message "TABLE"|
-
-
 ## Thank you
 
 I hope my plugins will be useful. Please create issues!
