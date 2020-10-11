@@ -31,20 +31,20 @@ C:\Users\%USERNAME%\volcano\plugins
 
 ## Plugin List
 
-### BetterWordCounterPlugin 1.0
+### Crater Word Counter
 You now have the ability to see how any words and character you selected with your mouse.
 
 ![[img/bwc_demo.png]]
 
-### Better Zoom On Azerty Keyboard
+### Crater Zoom On Azerty Keyboard
 
 Allow the zoom handling with an AZERTY keyboard. Global commands also available.
 
 ||Hotkey|Command|Result|
 |--|----|---|----|
-|1 |`ctrl+-`|`Better Zoom: Zoom Out`|Zoom out|
-|2 |`ctrl+=`|`Better Zoom: Zoom in`|Zoom in|
-|3 |`ctrl+à`|`Better Zoom: Reset Zoom`|Reset zoom|
+|1 |`ctrl+-`|`Crater Zoom: Zoom Out`|Zoom out|
+|2 |`ctrl+=`|`Crater Zoom: Zoom in`|Zoom in|
+|3 |`ctrl+à`|`Crater Zoom: Reset Zoom`|Reset zoom|
 
 
 ## Thank you

@@ -1,8 +1,8 @@
-class BetterZoomOnAzertyPlugin {
+class CraterZoomOnAzertyPlugin {
   constructor() {
-    this.id = 'better-azerty-zoom'
-    this.name = 'Better Zoom On Azerty Keyboard'
-    this.description = 'Better Zoom On Azerty Keyboard'
+    this.id = 'crater-azerty-zoom'
+    this.name = 'Crater Zoom On Azerty Keyboard'
+    this.description = 'Crater Zoom On Azerty Keyboard'
     this.defaultOn = true
     this.zoom = {
       step: 10,
@@ -20,19 +20,19 @@ class BetterZoomOnAzertyPlugin {
 
     this.instance.registerGlobalCommand({
       id: 'bzoom:zoomOut',
-      name: 'Better Zoom: Zoom Out',
+      name: 'Crater Zoom: Zoom Out',
       callback: () => this.zoomOut()
     });
 
     this.instance.registerGlobalCommand({
       id: 'bzoom:zoomIn',
-      name: 'Better Zoom: Zoom In',
+      name: 'Crater Zoom: Zoom In',
       callback: () => this.zoomIn()
     });
 
     this.instance.registerGlobalCommand({
       id: 'bzoom:reset',
-      name: 'Better Zoom: Reset Zoom',
+      name: 'Crater Zoom: Reset Zoom',
       callback: () => this.resetZoom()
     });
 
@@ -71,4 +71,4 @@ class BetterZoomOnAzertyPlugin {
 }
 
 
-module.exports = () => new BetterZoomOnAzertyPlugin()
+module.exports = () => new CraterZoomOnAzertyPlugin()

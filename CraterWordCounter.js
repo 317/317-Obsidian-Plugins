@@ -1,8 +1,8 @@
-class BetterWordCounterPlugin {
+class CraterWordCounterPlugin {
   constructor() {
-    this.id = 'better-word-counter'
-    this.name = 'Better Word Counter'
-    this.description = 'A Better Word Counter'
+    this.id = 'crater-word-counter'
+    this.name = 'Crater Word Counter'
+    this.description = 'A Crater Word Counter'
     this.defaultOn = true
     this.wordCounters = { global: 0, selection: 0 };
     this.charCounters = { global: 0, selection: 0 };
@@ -98,6 +98,6 @@ class BetterWordCounterPlugin {
     })
   }
 }
-module.exports = () => new BetterWordCounterPlugin()
+module.exports = () => new CraterWordCounterPlugin()
 
 
