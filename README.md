@@ -2,7 +2,7 @@
 > There won't be 317 plugins, because it's a lot of plugins
 
 
-Obsidian is cool. Very cool. but sometimes it lack things. So I will do plugins that do the things. 
+Obsidian is cool. Very cool. but sometimes it lack things. So I will do plugins that do the things.	 
 
 The plugins are made on top of the [volcano](https://github.com/kognise/volcano) plugin loader brought to us by the good [Kognise](https://github.com/kognise)
 
@@ -10,7 +10,15 @@ The plugins are made on top of the [volcano](https://github.com/kognise/volcano)
 
 ## Installation
 
-### Node.js & Volcano
+### Node.js & Volcanoqsd
+|   |   |   |
+|---|---|---|
+|   |   |   |
+|   |   |   ||dsqdqs
+|   |   |   |
+|---|---|---|
+|   |   |   |
+|   |   |   ||
 Just follow the Volcano's [README.md](https://github.com/kognise/volcano/blob/232eaffb6883e6117c7475062dcd891d6a0e14b6/README.md) instructions.
 
 
@@ -26,10 +34,18 @@ C:\Users\%USERNAME%\volcano\plugins
 ```
 ~/volcano/plugins/
 ```
+|   |   |   |
+|---|---|---|
+|   |   |   |
+|   |   |   ||zzzz|||dfgf
+|   |   |   |
+|---|---|---|
+|   |   |   |
+|   |   |   ||
 
 
 
-## Plugin List
+## Plugin List|
 
 ### BetterWordCounterPlugin 1.0
 You now have the ability to see how any words and character you selected with your mouse.
@@ -68,6 +84,7 @@ Allow the zoom handling with an AZERTY keyboard. Global commands also available.
 I hope my plugins will be useful. Please create issues!
 
 Thierno Rignoux – t.rignoux@gmail.com
+
 
 
 

@@ -36,7 +36,7 @@ class BetterZoomOnAzertyPlugin {
       callback: () => this.resetZoom()
     });
 
-    this.app.hotkeyManager.customKeys["bzoom:zoomOut"] = [{ modifiers: ["Mod"], key: "-" }];
+    this.app.hotkeyManager.customKeys["bzoom:zoomOut"] = [{ modifiers: ["Mod"], key: "-" }, { modifiers: ["Mod"], key: "u" },];
     this.app.hotkeyManager.customKeys["bzoom:zoomIn"] = [{ modifiers: ["Mod"], key: "=" }, { modifiers: ["Mod"], key: "+" }];
     this.app.hotkeyManager.customKeys["bzoom:reset"] = [{ modifiers: ["Mod"], key: "à" }, { modifiers: ["Mod"], key: "0" }];
   }

@@ -1,84 +1,82 @@
 
 
-module.exports = () => {
-  import { readFile } from 'fs'
-  const BT_TEMPLATE_PATH = "./BetterTables/bt-template.md";
-  class BetterTablesPlugin {
-    constructor() {
-      this.id = 'better-tables'
-      this.name = 'Better Tables'
-      this.description = 'This is my tables. They are the best. '
-      this.defaultOn = true
-    }
-
-    init(app, instance) {
-      console.log("INIT")
-      this.app = app
-      this.instance = instance
-
-      this.instance.registerGlobalCommand({
-        id: 'btable:make',
-        name: 'Better Tables: Make new table',
-        callback: () => this.trigger()
-      });
-      console.log(this.app)
-      console.log(this.app.hotkeyManager.customKeys)
-      this.app.hotkeyManager.customKeys["btable:make"] = [{ modifiers: ["Mod"], key: "t" }];
-    }
-
-    trigger() {
-      fs.readFile(BT_TEMPLATE_PATH, 'utf8', (err, data) => {
-        console.group("insertAtCaret", data);
-
-        this.insertAtCaret(this.btTemplate);
-
-      });
-      console.groupEnd();
-
-      console.log(this.instance);
-      console.log(this.app);
-    }
 
 
+const BT_TEMPLATE = `
+|   |   |   |
+|---|---|---|
+|   |   |   |
+|   |   |   |`;
 
-    insertAtCaret(text) {
-      var txtarea = document.activeElement;
-      var scrollPos = txtarea.scrollTop;
-      var strPos = 0;
-      var br = ((txtarea.selectionStart || txtarea.selectionStart == '0') ?
-        "ff" : (document.selection ? "ie" : false));
-      if (br == "ie") {
-        txtarea.focus();
-        var range = document.selection.createRange();
-        range.moveStart('character', -txtarea.value.length);
-        strPos = range.text.length;
+const BetterTablesLib = require("./BetterTables.lib.js");
+
+class BetterTablesPlugin {
+  constructor() {
+    this.id = 'better-tables'
+    this.name = 'Better Tables'
+    this.description = 'This is my tables. They are the best. '
+    this.defaultOn = true
+    this.isInTable = false;
+    this.currentTable = "";
+    this.keyPressed = "";
+    this.keyCodePressed = "";
+    this.lastkeyPressed = "";
+    this.lastKeyCodePressed = "";
+
+
+  }
+
+  init(app, instance) {
+    this.app = app
+    this.instance = instance
+    document.addEventListener('keypress', (e) => this.trigger(e));
+  }
+
+  trigger(e) {
+    this.lastkeyPressed = this.keyPressed;
+    this.lastCodePressed = this.lastKeyCodePressed
+    this.keyPressed = e.key;
+    this.keyCodePressed = e.keyCode;
+
+    if (this.currentTable === "") {
+      // Si la table est vide et que c'est pas un pipe, babye
+      if (this.keyPressed !== "|") {
+        return false;
       }
-      else if (br == "ff") strPos = txtarea.selectionStart;
-
-      var front = (txtarea.value).substring(0, strPos);
-      var back = (txtarea.value).substring(strPos, txtarea.value.length);
-      txtarea.value = front + text + back;
-      strPos = strPos + text.length;
-      if (br == "ie") {
-        txtarea.focus();
-        var range = document.selection.createRange();
-        range.moveStart('character', -txtarea.value.length);
-        range.moveStart('character', strPos);
-        range.moveEnd('character', 0);
-        range.select();
+      // Si la table est vide, et que c'est un pipe
+      if (this.keyPressed === "|") {
+        this.currentTable = BetterTablesLib.pipeProcessing(this.currentTable, "first pipe");
+        return;
       }
-      else if (br == "ff") {
-        txtarea.selectionStart = strPos;
-        txtarea.selectionEnd = strPos;
-        txtarea.focus();
+    } else {
+      if (this.keyPressed === "|") {
+        this.currentTable = BetterTablesLib.pipeProcessing(this.currentTable, "nth pipe");
+        return;
       }
-      txtarea.scrollTop = scrollPos;
+      // Si la table est pas vide et que c'est un saut de ligne
+      if (this.keyPressed === "\n") {
+        this.currentTable = BetterTablesLib.newLine(this.currentTable);
+        return;
+      }
+      // Si la touche est TAB
+      if (this.keyCodePressed === 9 && (this.lastkeyPressed == "|" || this.lastkeyPressed == "-")) {
+        this.currentTable = BetterTablesLib.makeHeaderLine(this.currentTable);
+        return;
+      }
+      // Si la table est pas vide et que c'est un autre caractère
+      this.currentTable = this.currentTable.concat(this.keyPressed);
+      return;
     }
+
+    // Si la table est pas vide et que c'est un pipe
 
   }
 
 
 
 
-  new BetterTablesPlugin();
 }
+
+
+
+module.exports = () => new BetterTablesPlugin()

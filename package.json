@@ -1,0 +1,22 @@
+{
+  "name": "317-obsidian-plugins",
+  "version": "1.0.0",
+  "description": "> There won't be 317 plugins, because it's a lot of plugins",
+  "main": "BetterTables.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/317/317-Obsidian-Plugins.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/317/317-Obsidian-Plugins/issues"
+  },
+  "homepage": "https://github.com/317/317-Obsidian-Plugins#readme",
+  "dependencies": {
+    "jest": "^26.5.2"
+  }
+}
